@@ -1,0 +1,12 @@
+# encoding: utf-8
+
+group :development do
+  gem 'rake', '~>10.1'
+end
+
+group :metrics do
+  gem 'flog', '~>4.1'
+  gem 'rubocop', '~>0.10'
+end
+
+eval_gemfile('Gemfile.local') if File.exists?('Gemfile.local')
