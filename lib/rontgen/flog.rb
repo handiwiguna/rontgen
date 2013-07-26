@@ -18,9 +18,9 @@ module Rontgen
 
     def run!
       @instance.flog(*FlogCLI.expand_dirs_to_files(Rontgen.project_lib))
-      @instance.totals.select { |name, score| name[-5, 5] != '#none'  }
-                 .map         { |name, score| [name, score.round(1)]  }
-                 .sort_by     { |name, score| score  }
+      @instance.totals.select  { |name, score| name[-5, 5] != '#none'  }
+                      .map     { |name, score| [name, score.round(1)]  }
+                      .sort_by { |name, score| score  }
     end
   end
 end
