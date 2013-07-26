@@ -22,6 +22,8 @@ namespace :rontgen do
         end
 
         abort "#{bad_methods.size} methods have a flog complexity > #{threshold}"
+      else
+        puts "OK"
       end
     end
 
