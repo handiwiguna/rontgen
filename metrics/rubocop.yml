@@ -5,7 +5,8 @@ AllCops:
     - 'Gemfile.dev'
     - 'Gemfile.local'
     - '../**/*.rake'
-  Excludes: []
+  Excludes:
+    - '**/bin/*'
 
 # Document classes and non-namespace modules.
 Documentation:
